@@ -32,6 +32,7 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 
 
     background: url('../imagens/frame-iphone.png') no-repeat;
@@ -49,7 +50,28 @@ iframe{
 }
 
 #redes-sociais{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
     text-align: right;
+}
+
+@media (max-width: 400px) {
+    #redes-sociais {
+        position: static;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+
+    #redes-sociais br {
+        display: none;
+    }
 }
 
 #redes-sociais img{
